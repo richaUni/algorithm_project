@@ -73,6 +73,25 @@ int main()
 				 {0,0,0,0,0,1,1,1,1,1}};
 
 	std::cout<< maxAreaOfIsland(g2)<<'\n';
+
+	// All water: expected 0
+    g = {{0, 0},
+         {0, 0}};
+    std::cout << maxAreaOfIsland(g) << '\n';
+
+    // Single land cell: expected 1
+    g = {{1}};
+    std::cout << maxAreaOfIsland(g) << '\n';
+
+    // Diagonal land: expected 1
+    g = {{1, 0},
+         {0, 1}};
+    std::cout << maxAreaOfIsland(g) << '\n';
+
+    // All land: expected 4
+    g = {{1, 1},
+         {1, 1}};
+    std::cout << maxAreaOfIsland(g) << '\n';
 				
 	return 0;
 }
